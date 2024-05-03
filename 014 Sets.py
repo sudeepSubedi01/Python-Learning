@@ -5,6 +5,7 @@ print (foods)
 foods.add('milk')
 foods.remove('roti')
 print(foods.pop())
+print(len(foods))
 # foods.clear()
 print('using loop:')
 for i in foods:

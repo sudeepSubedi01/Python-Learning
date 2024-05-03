@@ -12,3 +12,15 @@ print(name.count("a")) #counts the number of a
 print(name.replace("a","x"))
 print(name.split(' '))
 print(name*3)
+
+animal='komodo dragon'
+if (animal[0].islower):
+  animal = animal.capitalize()
+print(animal)
+
+firstName = animal[:6]
+lastName = animal[-6:]
+lastChar = animal[-1]
+print(firstName)
+print(lastName)
+print(lastChar)

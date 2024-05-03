@@ -1,1 +1,2 @@
-odka','v
+capitals['India'] = 'NewDehli'
+capitals['Bhutan'] = 'Thimpu'
