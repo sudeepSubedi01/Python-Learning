@@ -1,3 +1,4 @@
+import shutil
 try:
   with open('sample.txt') as file:
       print("First line:")
@@ -20,3 +21,5 @@ try:
 except Exception as e:
    print(e)
    print('Sth went wrong')
+
+shutil.copy('D:\\Python\\sample.txt','D:\\Python\\sample-copy.txt' )
