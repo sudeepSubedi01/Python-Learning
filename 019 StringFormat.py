@@ -36,4 +36,4 @@ number3 = 15
 print('The number is {:b}'.format(number3))
 print('The number is {:o}'.format(number3))
 print('The number is {:X}'.format(number3))
-print('The number is {:elll}'.format(number3))
+print('The number is {:e}'.format(number3))

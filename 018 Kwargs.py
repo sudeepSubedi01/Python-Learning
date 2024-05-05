@@ -1,4 +1,5 @@
 def hello (**kwargs):
+  kwargs.update({'title' : 'Mr. Prime Minister'})
   print(kwargs)
   print("Hello ",end = '' )
   for key,value in kwargs.items():
