@@ -1,6 +1,6 @@
 class Car:
   def drive(self):
-    print('The car ' + self.name +   ' is driving')
+    print('The car ' + self.name + ' is driving')
 
   def stop(self):
     print("The car has stopped")
