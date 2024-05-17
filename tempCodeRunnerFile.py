@@ -1,1 +1,3 @@
-quit
+print()
+print()
+print()
