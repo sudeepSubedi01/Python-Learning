@@ -11,7 +11,7 @@ def hello(func):  	  #higher order function
 hello(quiet)
 hello(loud)
 #---------------------------------------------------------
-def divisor(x):
+def divisor(x): #higher order function
   def dividend(y):
     return y/x
   return dividend
