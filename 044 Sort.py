@@ -46,6 +46,7 @@ student1 = [
   ('hello3', 'D', 55)
   ]
 value = lambda col: col[2]
-student1.sort(key = value)
-for i in student1:
+# student1.sort(key = value, reverse=True)
+sortedStudent1 = sorted(student1, key= value, reverse = True)
+for i in sortedStudent1:
   print(i)
