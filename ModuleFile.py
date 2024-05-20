@@ -3,3 +3,5 @@ def hello():
 
 def bye():
   print('This is from the bye function')
+
+print(__name__)
