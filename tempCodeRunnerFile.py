@@ -1,2 +1,1 @@
-print(__name__)
-print(ModuleFile.__name__)
+study

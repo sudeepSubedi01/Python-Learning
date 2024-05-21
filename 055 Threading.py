@@ -18,9 +18,13 @@ y.start()
 z = threading.Thread(target=study,args=())
 z.start()
 
+x.join()
+y.join()
+z.join()
 # eat_breakfast()
 # drink_coffee()
 # study()
 
 print(threading.active_count())   #returns the number of threads currently active
 print(threading.enumerate)
+print(time.perf_counter())
