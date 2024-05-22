@@ -18,4 +18,5 @@ label = Label(window,
 label.pack()    #places label at the center of the window
 # label.place(x=100,y=100)
 window.mainloop()
-print(type(window))     #type of window is tkinter
+print(type(window))     #type of window is tkinter.Tk
+print(type(label))     #type of window is tkinter.Label
