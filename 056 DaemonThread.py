@@ -10,6 +10,10 @@ def timer():
     print('Logged in for: '+ str(count) + ' seconds')
 
 x = threading.Thread(target= timer )
+# x.setDaemon(True)   #deprecated
+x.daemon = True
 x.start()
+# print(x.isDaemon())   #deprecated
+print(x.daemon)
 
-answer = input("Do you want to exit ??(Y/N)")
+answer = input("Input sth to exit this background task:")
