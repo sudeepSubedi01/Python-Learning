@@ -1,10 +1,11 @@
 from tkinter import *
 
 def handleDrag(event):
-  widget = event.widget
+  widget = event.widget   #returns the widget that triggered this event
   widget.startX = event.x    #custom attribute added to the label widget
   widget.startY = event.y
   print(str(event.x) + str(event.y))
+  
 def handleMotion(event):
   widget = event.widget
   x = widget.winfo_x() - widget.startX + event.x    #parent element is window
