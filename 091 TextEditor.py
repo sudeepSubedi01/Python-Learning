@@ -4,13 +4,15 @@ from tkinter import filedialog
 import pyautogui as pg
 from tkinter import messagebox
 import pyperclip
+from tkinter import font
 
 def handleColorChange():
   color = colorchooser.askcolor()
   print(color[1])
   textField.config(fg=color[1])
-def handleFontChange():
-  pass
+
+def handleFontChange(*args):
+  textField.config(font=(fontName.get(),fontSpinBox.get()))
 
 def handleSave():
   inputText = textField.get('1.0', END)
@@ -59,8 +61,14 @@ def handlePaste():
   clipboardText = pyperclip.paste()
   textField.insert(END,clipboardText)
 
+
 window = Tk()
+fontSize = StringVar(window)
+fontSize.set('25')
+fontName = StringVar(window)
+fontName.set('Arial')
 window.geometry('500x500')
+window.minsize(500,500)
 menubar = Menu(window)
 window.config(menu = menubar)
 fileMenu = Menu(menubar,tearoff=0)
@@ -81,18 +89,17 @@ textField = Text(window,
                  height = 7,
                  width=20,
                  pady=5)
-textField.pack()
-scrollbar = Scrollbar(textField)
-scrollbar.pack(side=RIGHT, fill=Y)
+textField.pack(expand=True,fill=BOTH)
 
 frame = Frame(window)
+frame.pack()
 colorBtn = Button(frame,text='Color',command=handleColorChange)
-colorBtn.grid(row=0,column=0)
-
-fontBtn = Button(frame,text='Font',command=handleFontChange)
-fontBtn.grid(row=0,column=1)
-
+colorBtn.pack(side=LEFT)
+fontSpinBox = Spinbox(frame,from_=10, to=30, textvariable=fontSize,command=handleFontChange)
+fontSpinBox.pack(side=LEFT)
+fontOption = OptionMenu(frame,fontName,*font.families(),command=handleFontChange)
+fontOption.pack(side=LEFT)
 clearBtn = Button(frame,text='Clear',command=handleClear)
-clearBtn.grid(row=0,column=2)
+clearBtn.pack(side=LEFT)
 
 window.mainloop()
